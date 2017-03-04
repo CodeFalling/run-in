@@ -1,6 +1,6 @@
 {
   "name": "run-in",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Run command in all directory",
   "bin": {
     "run-in": "./bin/run-in"
@@ -25,6 +25,7 @@
     "commander": "~2.0.0",
     "glob": "^7.1.1",
     "glob-promise": "^3.1.0",
+    "parse-spawn-args": "^1.0.2",
     "promise-polyfill": "^6.0.2"
   },
   "devDependencies": {}

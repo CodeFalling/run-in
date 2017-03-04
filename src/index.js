@@ -3,6 +3,7 @@ var glob = require('glob-promise');
 var fs = require('fs');
 var spawn = require('child_process').spawn;
 var colors = require('colors');
+var parse = require('parse-spawn-args').parse;
 
 function align(path, str) {
     var spaces = new Array(path.length + 1).join(' ');
@@ -26,9 +27,8 @@ module.exports = function run(program, pattern, command) {
             var pro = command.split(' ')[0];
             var args = command.split(' ').filter(function(item, index) {
                 if (index === 0) return false;
-                if (item === '') return false;
-                return true;
-            });
+            }).join(' ');
+            args = parse(args);
             var child = spawn(pro, args, {
                 cwd: process.cwd() + '/' + path
             });

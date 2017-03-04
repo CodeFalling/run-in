@@ -13,7 +13,7 @@ require('autocmdr/lib/help')(program);
 
 
 program
-	.version('0.0.2');
+	.version('0.0.3');
 
 program
 	.description('run command in all directory')
