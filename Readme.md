@@ -4,6 +4,12 @@
 
 Run your command in all directory
 
+## Why this
+
+** CD to every directory and type `npm run watch` is really tooooooo boring **. I even have to keep many tabs of them and jump here and there to watch their logs.
+
+`pm2 start` maybe another good idea in this case. But why not make a script to do this?
+
 ## Install
 
 To install run-in from npm, run:
