@@ -6,7 +6,7 @@ Run your command in all directory
 
 ## Why this
 
-** CD to every directory and type `npm run watch` is really tooooooo boring **. I even have to keep many tabs of them and jump here and there to watch their logs.
+**CD to every directory and type `npm run watch` is really tooooooo boring**. I even have to keep many tabs of them and jump here and there to watch their logs.
 
 `pm2 start` maybe another good idea in this case. But why not make a script to do this?
 
@@ -32,6 +32,8 @@ to watching all your projects in this directory (`npm run watch`)
 $ run-in -g "*" -c "npm run watch"
 ```
 
+## Screenshot
+![image](https://cloud.githubusercontent.com/assets/5436704/23579716/2e248fb0-012e-11e7-901f-44b143f461fd.png)
 
 ## License
 
