@@ -20,10 +20,10 @@ To run `npm install` in all your `prefix-xxx` directory, just run
 $ run-in -g "prefix-*" -c "npm install"
 ```
 
-to watching all your projects in this directory (`npm run build -- -w`)
+to watching all your projects in this directory (`npm run watch`)
 
 ```
-$ run-in -g "*" -c "npm run build -- -w"
+$ run-in -g "*" -c "npm run watch"
 ```
 
 
