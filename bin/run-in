@@ -1,0 +1,31 @@
+#!/usr/bin/env node
+'use strict';
+
+var program  = require('commander');
+var run = require('../src/index');
+
+process.on('unhandledRejection', function(err) {
+	throw err;
+});
+
+require('autocmdr/lib/logger')(program);
+require('autocmdr/lib/help')(program);
+
+
+program
+	.version('0.0.1');
+
+program
+	.description('run command in all directory')
+	.usage('-g "*" -c "ls"')
+	.option('-c, --cmd <cmd>', 'Command you want to run')
+	.option('-g, --glob <glob>', 'Glob of directory path')
+	.parse(process.argv);
+
+var glob = program.glob || '*';
+
+if (!(program.glob && program.cmd)) {
+	program.help();
+} else {
+	run(program, glob, program.cmd);
+}

@@ -1,0 +1,32 @@
+{
+  "name": "run-in",
+  "version": "0.0.1",
+  "description": "Run command in all directory",
+  "private": true,
+  "bin": {
+    "run-in": "./bin/run-in"
+  },
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "author": {
+    "name": "codefalling",
+    "email": "code.falling@gmail.com",
+    "url": "https://github.com/CodeFalling"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CodeFalling/run-in"
+  },
+  "license": "MIT",
+  "bugs": "https://github.com/CodeFalling/run-in/issues",
+  "dependencies": {
+    "autocmdr": "~0.0.7",
+    "colors": "^1.1.2",
+    "commander": "~2.0.0",
+    "glob": "^7.1.1",
+    "glob-promise": "^3.1.0",
+    "promise-polyfill": "^6.0.2"
+  },
+  "devDependencies": {}
+}
