@@ -2,7 +2,6 @@
   "name": "run-in",
   "version": "0.0.1",
   "description": "Run command in all directory",
-  "private": true,
   "bin": {
     "run-in": "./bin/run-in"
   },

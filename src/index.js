@@ -4,6 +4,12 @@ var fs = require('fs');
 var spawn = require('child_process').spawn;
 var colors = require('colors');
 
+function align(path, str) {
+    var spaces = new Array(path.length + 1).join(' ');
+    console.log(spaces.length)
+    return str.replace(/\n/g, '\n' + spaces + '|');
+}
+
 module.exports = function run(program, pattern, command) {
     var log = program.log;
     var info = log.info;
@@ -29,10 +35,10 @@ module.exports = function run(program, pattern, command) {
             child.stdout.setEncoding('utf8');
             child.stderr.setEncoding('utf8');
             child.stdout.on('data', function(data) {
-                process.stdout.write(path.green + '|' + data);
+                process.stdout.write(path.green + '|' + align(path, data));
             });
             child.stderr.on('data', function(data) {
-                process.stderr.write(path.red + '|' + data);
+                process.stderr.write(path.red + '|' + align(path, data));
             });
             child.on('close', function(code) {
                 console.log(path.green + ' exit with ' + code);
