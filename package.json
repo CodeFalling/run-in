@@ -1,6 +1,6 @@
 {
   "name": "run-in",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Run command in all directory",
   "bin": {
     "run-in": "./bin/run-in"
