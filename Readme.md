@@ -2,7 +2,7 @@
 
 ## Description
 
-Run your command in all directory
+Run your command in all directories
 
 ## Why this
 
@@ -31,6 +31,8 @@ to watching all your projects in this directory (`npm run watch`)
 ```
 $ run-in -g "*" -c "npm run watch"
 ```
+
+`run-in` use `glob` to match directories, see details [here](https://github.com/isaacs/node-glob).
 
 ## Screenshot
 ![image](https://cloud.githubusercontent.com/assets/5436704/23579716/2e248fb0-012e-11e7-901f-44b143f461fd.png)
